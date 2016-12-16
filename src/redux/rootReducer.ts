@@ -6,6 +6,7 @@ import {ClinicalInformationData} from "../pages/patientView/Connector";
 import datasetDownloads from 'pages/datasetView/Connector';
 import {DatasetDownloads} from "../pages/datasetView/Connector";
 import {Connector} from "../shared/lib/ConnectorAPI";
+import {default as old_query, QueryData} from "../shared/components/query/old/QueryConnector";
 
 interface Action {
   type: any;
@@ -17,13 +18,15 @@ type Reducer<S> = <A extends Action>(state: S, action: A) => S;
 // Require your modules here
 const modules:{[name:string]:Connector<any, any, any, any>} = {
     clinicalInformation,
-    datasetDownloads
+    datasetDownloads,
+    old_query,
 };
 
 // Add state nodes corresponding to your modules here
 export type RootState = {
-    datasetDownloads:DatasetDownloads
+    datasetDownloads:DatasetDownloads,
     clinicalInformation:ClinicalInformationData,
+    old_query: QueryData,
 }
 
 export const actions = {};

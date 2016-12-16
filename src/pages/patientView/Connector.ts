@@ -34,6 +34,7 @@ export default new class ClinicalInformationConnector extends Connector<RootStat
         clinicalDataStatus: 'pending'
     };
 
+    actions = {};
     mapDispatchToProps = {
         loadClinicalInformationTableData: () => (dispatch:IDispatch<ActionTypes>) => { // this is a thunk
 
