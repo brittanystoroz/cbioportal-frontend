@@ -262,6 +262,8 @@ export type SampleList = {
 
         'studyId': string
 
+        'sampleCount': number
+
 };
 
 /**
